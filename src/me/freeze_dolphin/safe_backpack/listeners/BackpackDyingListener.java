@@ -23,11 +23,10 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.Plugin;
 
 public class BackpackDyingListener implements Listener {
 
-	public BackpackDyingListener(Plugin plug) {
+	public BackpackDyingListener(SafeBackpack plug) {
 		plug.getServer().getPluginManager().registerEvents(this, plug);
 	}
 

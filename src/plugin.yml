@@ -1,11 +1,26 @@
 name: SafeBackpack
 author: Freeze_Dolphin
 main: me.freeze_dolphin.safe_backpack.SafeBackpack
-version: 1.0
+version: 1.1
 
 depend: [CS-CoreLib, Slimefun]
 
+commands: 
+  bpdatarelocator: 
+    description: "Relocate the slimefun backpack data to this plugin's backpack data"
+  itemconvertor: 
+    description: "Check and convert the slimefun's backpack items into this plugin's backpack item"
+
 permissions: 
+  safebackpack.admin: 
+    default: op
+  safebackpack.convertor.*:  
+    default: false
+    children: 
+      safebackpack.convertor.auto-run: 
+        default: false
+      safebackpack.convertor.convert: 
+        default: op
   safebackpack.dye.*: 
     default: op
     children: 

@@ -1,5 +1,6 @@
 package me.freeze_dolphin.safe_backpack.listeners;
 
+import me.freeze_dolphin.safe_backpack.SafeBackpack;
 import me.freeze_dolphin.safe_backpack.api.Backpacks;
 import me.freeze_dolphin.safe_backpack.lists.SafeBackpackItems;
 import me.mrCookieSlime.Slimefun.Setup.SlimefunManager;
@@ -13,12 +14,11 @@ import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 
 public class SafeCoolerListener implements Listener {
 
-	public SafeCoolerListener(Plugin plugin) {
+	public SafeCoolerListener(SafeBackpack plugin) {
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 

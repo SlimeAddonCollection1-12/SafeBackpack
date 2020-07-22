@@ -1,5 +1,6 @@
 package me.freeze_dolphin.safe_backpack.listeners;
 
+import me.freeze_dolphin.safe_backpack.SafeBackpack;
 import me.freeze_dolphin.safe_backpack.lists.SafeBackpackItems;
 import me.mrCookieSlime.Slimefun.Setup.SlimefunManager;
 
@@ -7,11 +8,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.Plugin;
 
 public class ToolListener implements Listener {
 
-	public ToolListener(Plugin plugin) {
+	public ToolListener(SafeBackpack plugin) {
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 

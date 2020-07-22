@@ -1,0 +1,30 @@
+convertor: 
+  auto-run: false
+
+# 非常不建议修改 'backpack-desc' 和 'cooler-desc' 下的内容
+# 因为如果修改错误可能会导致玩家数据丢失而造成玩家损失
+# (而且是大面积的那种 =. =)
+#
+# 确保只有一个 "<ID>" 且在该行的最后
+#
+# Available variables: 
+# <type> - The name of the backpack, returns like "&c&e背包"
+# <capacity> - The capacity of the backpack, returns a integer between 9 and 54 
+backpack-desc: 
+  - "<type>"
+  - ""
+  - "&7容量: &e<capacity>"
+  - "&7ID: <ID>"
+  - ""
+  - "&7&e右键 &7打开"
+  
+cooler-desc: 
+  - "<type>"
+  - "&r所有存入冰箱的 果汁/冰沙"
+  - "&r都会在你饥饿时"
+  - "&r自动消耗补充你的饥饿值"
+  - ""
+  - "&7容量: &e<capacity>"
+  - "&7ID: <ID>"
+  - ""
+  - "&7&e右键 &7打开"

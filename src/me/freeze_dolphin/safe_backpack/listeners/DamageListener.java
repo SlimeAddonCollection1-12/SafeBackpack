@@ -2,6 +2,7 @@ package me.freeze_dolphin.safe_backpack.listeners;
 
 import java.util.Iterator;
 
+import me.freeze_dolphin.safe_backpack.SafeBackpack;
 import me.freeze_dolphin.safe_backpack.lists.SafeBackpackItems;
 import me.mrCookieSlime.Slimefun.Setup.SlimefunManager;
 import me.mrCookieSlime.Slimefun.api.Soul;
@@ -11,11 +12,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.Plugin;
 
 public class DamageListener implements Listener {
 
-	public DamageListener(Plugin plugin) {
+	public DamageListener(SafeBackpack plugin) {
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 

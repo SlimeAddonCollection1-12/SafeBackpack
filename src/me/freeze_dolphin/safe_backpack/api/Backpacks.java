@@ -43,8 +43,7 @@ public class Backpacks {
 					uuid = line.split("#")[0].replace(ChatColor.translateAlternateColorCodes('&', "&7ID: "), "");
 				} catch (NumberFormatException numberFormatException) {}
 			}
-		} 
-
+		}
 
 		if (id >= 0) {
 			Config cfg = new Config(new File("data-storage/SafeBackpacks/backpacks/" + uuid + "#" + id + ".yml"));

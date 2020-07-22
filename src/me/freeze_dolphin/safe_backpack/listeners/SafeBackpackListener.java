@@ -27,11 +27,10 @@ import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.Plugin;
 
 public class SafeBackpackListener implements Listener {
 
-	public SafeBackpackListener(Plugin plugin) {
+	public SafeBackpackListener(me.freeze_dolphin.safe_backpack.SafeBackpack plugin) {
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 
