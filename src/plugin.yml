@@ -1,7 +1,7 @@
 name: SafeBackpack
 author: Freeze_Dolphin
 main: me.freeze_dolphin.safe_backpack.SafeBackpack
-version: 1.1
+version: 1.2
 
 depend: [CS-CoreLib, Slimefun]
 
@@ -14,7 +14,7 @@ commands:
 permissions: 
   safebackpack.admin: 
     default: op
-  safebackpack.convertor.*:  
+  safebackpack.convertor.*: 
     default: false
     children: 
       safebackpack.convertor.auto-run: 
@@ -26,35 +26,38 @@ permissions:
     children: 
       safebackpack.dye.menu: 
         default: false
-      safebackpack.dye.color.white: 
-        default: false
-      safebackpack.dye.color.orange: 
-        default: false
-      safebackpack.dye.color.magenta: 
-        default: false
-      safebackpack.dye.color.light-blue: 
-        default: false
-      safebackpack.dye.color.yellow: 
-        default: false
-      safebackpack.dye.color.lime: 
-        default: false
-      safebackpack.dye.color.pink: 
-        default: false
-      safebackpack.dye.color.gray: 
-        default: false
-      safebackpack.dye.color.light-gray: 
-        default: false
-      safebackpack.dye.color.cyan: 
-        default: false
-      safebackpack.dye.color.purple: 
-        default: false
-      safebackpack.dye.color.blue: 
-        default: false
-      safebackpack.dye.color.brown: 
-        default: false
-      safebackpack.dye.color.green: 
-        default: false
-      safebackpack.dye.color.red: 
-        default: false
-      safebackpack.dye.color.black: 
-        default: false
+      safebackpack.dye.color.*: 
+        default: op
+        children: 
+          safebackpack.dye.color.white: 
+            default: false
+          safebackpack.dye.color.orange: 
+            default: false
+          safebackpack.dye.color.magenta: 
+            default: false
+          safebackpack.dye.color.light-blue: 
+            default: false
+          safebackpack.dye.color.yellow: 
+            default: false
+          safebackpack.dye.color.lime: 
+            default: false
+          safebackpack.dye.color.pink: 
+            default: false
+          safebackpack.dye.color.gray: 
+            default: false
+          safebackpack.dye.color.light-gray: 
+            default: false
+          safebackpack.dye.color.cyan: 
+            default: false
+          safebackpack.dye.color.purple: 
+            default: false
+          safebackpack.dye.color.blue: 
+            default: false
+          safebackpack.dye.color.brown: 
+            default: false
+          safebackpack.dye.color.green: 
+            default: false
+          safebackpack.dye.color.red: 
+            default: false
+          safebackpack.dye.color.black: 
+            default: false

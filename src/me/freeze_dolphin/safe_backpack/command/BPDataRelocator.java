@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Set;
 import java.util.UUID;
 
+import me.freeze_dolphin.safe_backpack.SafeBackpack;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -34,7 +36,12 @@ public class BPDataRelocator implements CommandExecutor {
 		if (command.getName().equals("bpdatarelocator")) {
 			if (sender instanceof ConsoleCommandSender) {
 				if (args.length == 5) {
-
+					
+					if (!SafeBackpack.check) {
+						fatal("Aborted");
+						return true;
+					}
+					
 					if (!args[0].equals("default")) slimefunPath = args[0];
 					if (!args[1].equals("default")) targetPath = args[1];
 					if (args[3].equals("true") || args[3].equals("on")) delete = true;
@@ -80,15 +87,15 @@ public class BPDataRelocator implements CommandExecutor {
 					for1: 
 						for (File f : (new File(slimefunPath)).listFiles()) {
 							info("Checking " + f.getName());
-							if (!f.getName().matches(".*\\.yml")) { 
+							if (!f.getName().matches(".*\\.yml")) {
 								info(f.getName() + " is not a yaml file, ignored");
 								continue for1;
 							}
 							UUID uid;
-							try { 
+							try {
 								uid = UUID.fromString(f.getName().split("\\.yml")[0]); 
 								info("UUID " + uid + " got");
-							} catch (IllegalArgumentException ex) { 
+							} catch (IllegalArgumentException ex) {
 								info(f.getName() + " is not a player data file, ignored");
 								continue for1;
 							}

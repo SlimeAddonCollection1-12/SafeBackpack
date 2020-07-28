@@ -5,7 +5,7 @@ convertor:
 # 因为如果修改错误可能会导致玩家数据丢失而造成玩家损失
 # (而且是大面积的那种 =. =)
 #
-# 确保只有一个 "<ID>" 且在该行的最后
+# 确保有且只有一行 "&7ID: <ID>"
 #
 # Available variables: 
 # <type> - The name of the backpack, returns like "&c&e背包"
@@ -28,3 +28,5 @@ cooler-desc:
   - "&7ID: <ID>"
   - ""
   - "&7&e右键 &7打开"
+  
+vanilla-backpacks-checker: true
